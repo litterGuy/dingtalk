@@ -2,7 +2,7 @@
 
 [官方文档](https://open.dingtalk.com/document/robots/custom-robot-access#title-jfe-yo9-jl2)
 
-方便发送机器人
+方便发送机器人消息
 
 ## 使用
 
@@ -15,8 +15,8 @@ go get github.com/litterGuy/dingtalk
 2. 调用
 
 ```go
-client := NewClient("token", "secret")
-text := NewTextMessage()
+client := dingtalk.NewClient("token", "secret")
+text := dingtalk.NewTextMessage()
 text.SetContent("测试机器人使用")
 req, res, err := client.Send(text)
 if err != nil {
